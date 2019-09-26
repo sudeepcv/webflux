@@ -16,7 +16,7 @@ class FluxController{
         return Flux.just("string1","String2","string3").delayElements(Duration.ofSeconds(1));
     }
 
-    @GetMapping(value="/generate",produces = MediaType.APPLICATION_STREAM_JSON_VALUE)
+    @GetMapping(value="/generate",produces = MediaType.TEXT_EVENT_STREAM_VALUE)
     public Flux<String> testFluxGenerate(){
 
 
